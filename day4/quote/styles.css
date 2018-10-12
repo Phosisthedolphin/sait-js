@@ -1,0 +1,15 @@
+#quoteContainer {
+    background: red;
+    width: 500px;
+    height: 500px;
+    justify-content: center;
+    align-items: center;
+}
+#quote {
+    font-size: 32px;
+    color: green;
+}
+#author {
+    font-size: 20px;
+    color: black;
+}

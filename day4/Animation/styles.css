@@ -1,0 +1,8 @@
+#animationTest {
+    height: 100px;
+    width: 100px;
+    background: red;
+}
+html {
+    max-height: 1000px;
+}

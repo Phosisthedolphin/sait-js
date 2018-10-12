@@ -15,6 +15,25 @@ navLinks.style.margin = '5px';
 
 var heading = document.getElementById('titl');
 
+function success(position) {
+    var latitude = position.coords.latitude;
+    var longitude = position.coords.longitude;
+    var altitude = position.coords.altitude;
+    var speed = position.coords.speed;
+    document.write(latitude, longitude);
+    }
+function geoError(errorObj) {
+    alert("Uh oh, something went wrong");
+}
+
+
+if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(success, geoError);
+} else {
+    console.log('geolocation does not exist.');
+}
+
+
 heading.style.fontSize = '30px';
 heading.style.color = "green";
 

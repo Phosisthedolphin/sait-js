@@ -1,9 +1,37 @@
+body {
+    background-image: linear-gradient(rgba(202, 206, 255, 0.9) 30%, rgba(101, 103, 127, 0.5)), url('./img/mobo.jpg');
+    background-size: cover;
+}
+#contentContainer {
+    width: 80%;
+    height: 1000px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: auto;
+    padding: auto;
+
+}
 #quoteContainer {
-    background: red;
-    width: 500px;
-    height: 500px;
+    width: 80%;
     justify-content: center;
     align-items: center;
+    align-content: center;
+    flex-direction: column;
+    margin: auto;
+    padding: auto;
+    margin-bottom: 40px;
+}
+#buttonContainer {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin: auto;
+    padding: auto;
 }
 #quote {
     font-size: 32px;
@@ -12,4 +40,11 @@
 #author {
     font-size: 20px;
     color: black;
+}
+p {
+    font-family: 'K2D', sans-serif;
+}
+button {
+    font-family: 'K2D', sans-serif;
+    font-size: 22px;
 }

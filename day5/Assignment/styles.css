@@ -1,0 +1,43 @@
+/* GLOBAL */
+#q1, #q2, #q3, #q4, #q5, #result {
+    height: 300px;
+    font-size: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: auto;
+}
+@font-face {
+    font-family: 'saiyan';
+    src: url(./font/Saiyan-Sans.ttf);
+}
+p, label, input, legend, h2, h1{
+    font-family: 'saiyan';
+}
+p, label {
+    margin:15px;
+}
+h1 {
+    font-size: 60px;
+}
+#submit, #qFive, #qThree {
+    font-size: 32px;
+}
+#q1 {
+    background: lightblue;
+}
+#q2 {
+    background: lightcoral;
+}
+#q3 {
+    background: lightgreen;
+}
+#q4 {
+    background: lightseagreen;
+}
+#q5 {
+    background: lightslategray;
+}

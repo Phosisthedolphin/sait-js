@@ -67,7 +67,7 @@ function getRandom() {
     var quoteAuthor = quotes[randomQuote].author;
     var quoteQuote = quotes[randomQuote].quote;
     
-    
+    textAnim();
     document.getElementById('quote').innerHTML = quoteQuote;
     document.getElementById('author').innerHTML = quoteAuthor;
 }

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel='stylesheet' href='./styles.css'>
+    <title>Document</title>
+</head>
+<body>
+    <h1>DragonBall Z Quiz</h1>
+    <form id='quizForm' name='quizForm'>
+        <div id='q1'>
+            <p>1. Who is Goku fighting when he goes Super Saiyan for the first time?</p>
+            <input type='radio' name='qOne' id='cell' value='cell'>Cell
+            <input type='radio' name='qOne' value='freeza'>Freeza
+            <input type='radio' name='qOne' value='boo'>Boo
+            <input type='radio' name='qOne' value='raditz'>Raditz
+            <p id='qOneErr' style='display:none'>Please select one!</p>
+        </div>
+        <div id='q2'>
+            <p>2. What is the name of the planet Vegeta comes from?</p>
+            <input type="radio" name='qTwo' value='earth'>Earth
+            <input type="radio" name='qTwo' value='mars'>Mars
+            <input type="radio" name='qTwo' value='vegeta'>Planet Vegeta
+            <input type="radio" name='qTwo' value='moon'>The Moon
+            <p id='qTwoErr' style='display:none'>Please select one!</p>
+        </div>
+        <div id='q3'>
+            <label for="qThree">3. How many times has Krillin died?</label>
+            <input type="number" id="qThree" name="qThree" placeholder="Enter your answer" style=" width:300px;" required>
+            <p id='qThreeErr' style='display:none;'>Please enter an answer!</p>
+        </div>
+       <div id='q4'>
+            <legend>4. Name two DBZ techniques.</legend>
+            <label><input type='checkbox' name='qFour' value='right'>Kamehameha</label>
+            <label><input type='checkbox' name='qFour' value='right'>Taiyo-Ken</label>
+            <label><input type='checkbox' name='qFour' value='wrong'>Hadouken</label>
+            <label><input type='checkbox' name='qFour' value='wrong'>Shoryuken</label>
+            <p id='qFourErr' style='display:none;'>Please select some boxes!</p>
+       </div>
+       <div id='q5'>
+           <label for="qFive">5. What is Vegeta's son's name?</label>
+           <label><input type='text' id='qFive' name='qFive' placeholder='type in a name(case sensitive)' required>
+            <p id='qFiveErr' style='display:none;'>Please enter your answer!</p>
+       </div>
+        <div id='submit'>
+            <p>
+                <input type='submit' id='submit' value='Submit' name='submit'/>
+            </p>
+        </div>
+        <div id = 'result'>
+            <h2>You got <span id='printResult'></span> out of 5 answers correct.<h2>
+        </div>
+    </form>
+    <script src='./script.js'></script>
+</body>
+</html>

@@ -72,9 +72,24 @@ function getRandom() {
     document.getElementById('author').innerHTML = quoteAuthor;
 }
 
+function textAnim () {
+    var quoteRun = document.getElementById('quote');
+    quoteRun.classList.toggle('anim-ran');
+    document.getElementById('quote').style.marginLeft = "250px";
+    document.getElementById('quote').style.opacity = '1';
+}
+
+function animReset () {
+    var quoteReset = document.getElementById('quote');
+    quoteReset.classList.toggle('run-anim');
+
+}
+
 // NOTE: No time left to implement this functionality, but it will push the last value into to the array stack that was popped and then use that value to print the quote.
 
 function nextQuote () {
+    animReset();
+    textAnim();
     getRandom();
     console.log(quoteHistory);
 }

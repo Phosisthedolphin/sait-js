@@ -36,6 +36,11 @@ body {
 #quote {
     font-size: 32px;
     color: green;
+    transition: 1.0s;
+    opacity: 0;
+}
+.run-anim {
+    opacity: 0;
 }
 #author {
     font-size: 20px;

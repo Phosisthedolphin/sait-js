@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Cat Walk</title>
+    <style>
+    
+    </style>
+  </head>
+  <body>
+
+    <img id="cat" src="https://media.giphy.com/media/321BFjSf0I1UDscORo/giphy.gif" style="position:absolute;left:0">
+
+    <script>
+
+      // Create a variable to track whether or not the cat should be walking forward or backwards
+      var walkForwards = true;
+      var catPos = 0;
+      var catPosInt = parseInt(localStorage.catposition);
+      console.log(catPosInt);
+      
+
+      function catWalk() {
+        // Get the image that has an id of 'cat' and assign it to variable ```img```
+        var img = document.getElementById('cat');
+
+        // img.style.left = (catPosInt) + 'px';
+
+        // Get the cat image's left position. This is a string. Use the parseInt method to turn it into a number that we can use to do math. Assign this number to variable ```currentLeft```
+        var currentLeft = img.style.left = (catPosInt) + 'px';             
+        // parseInt(img.style.left);
+
+        // If the cat should be walking forward and the left position of the cat image is greater than the width of the window minus the width of the image. (AKA when the cat reaches the right side of the page but before it leaves the page)
+        if (walkForwards && (currentLeft > (window.innerWidth-img.width))) {
+          // Make the cat walk backwards instead
+          walkForwards = false;
+        }
+
+        // If the cat should be walking backward and the left position of the cat image is less than or equal to 0. (AKA when the cat reaches the left side of the page but before it leaves the page)
+        if (!walkForwards && (currentLeft <= 0)) {
+          // Make the cat walk forwards instead
+          walkForwards = true;
+        }
+
+        
+        if (walkForwards) {
+          // If the cat should be walking forwards, set the image's left position to its current left position + 10px. This will move the cat forward by 10px.
+          img.style.left = (currentLeft + 10) + 'px';
+        } else {
+          // Otherwise (if the cat should be walking backwards), set the image's left position to its current left position - 10px. This will move the cat backward by 10px.
+          img.style.left = (currentLeft - 10) + 'px';
+        }
+
+        catPos = localStorage.catposition = String(currentLeft);
+      }
+
+      
+      
+      
+      // Call the catWalk function every 50 milliseconds.
+      setInterval(catWalk, 50);
+    </script>
+
+  </body>
+</html>

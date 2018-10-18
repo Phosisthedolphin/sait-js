@@ -1,0 +1,99 @@
+* {
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: "rekall";
+    src: url(../font/Smallville1.ttf);
+}
+h1 {
+    font-family: 'rekall';
+    font-size: 200px;
+    text-transform: uppercase;
+    margin: auto 0;
+    padding: auto 0;
+}
+h2 {
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 42px;
+    padding-right: 25px;
+}
+h3 {
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 36px;
+}
+header {
+    height: 120px;
+    display: flex;
+}
+.headerLeft {
+    background: #F2F2F2;
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+}
+.logo {
+
+}
+.address {
+    display: flex;
+    flex-direction: column;
+    align-content: right;
+    justify-content: right;
+    align-items: right;
+}
+.headerRight {
+    background: #1C1F26;
+    width: 30%;
+}
+.header-links {
+    background: #454E59;
+    display: flex;
+    justify-content: center;
+    height: 40px;
+}
+ul li{
+    display: inline;
+    margin-right: 30px;
+}
+.hero {
+    height: 600px;
+    background: gray;
+    display: flex;
+    background-image: url(../img/mars.jpg);
+    background-position: right;
+}
+.heroLeft {
+    background: #1C1F26;
+    color: white;
+    width: 50%;
+    -webkit-clip-path: polygon(0 0, 83% 0, 100% 100%, 0% 100%);
+    clip-path: polygon(0 0, 83% 0, 100% 100%, 0% 100%);
+}
+main {
+    background: #F2F2F2;
+    display: flex;
+    justify-content: center;
+}
+.container-wrapper-large {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+}
+.container-wrapper-small {
+
+}
+.container {
+    max-width: 80%;
+    background: white;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #222;
+    border-radius: 15px;
+    padding: 10px;
+}
+footer {
+    height: 150px;
+    background: #454E59;
+}

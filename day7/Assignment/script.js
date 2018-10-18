@@ -30,7 +30,6 @@ submit.addEventListener('click', function(event) {
     console.log(data);
     var words = data.lyrics;
     words = words.replace(/(?:\r\n|\r|\n)/g, '<br>');
-    // var words = data;
     console.log(words);
     
     lyricPage.innerHTML = '';

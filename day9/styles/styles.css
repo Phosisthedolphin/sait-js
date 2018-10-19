@@ -1,13 +1,14 @@
+/* ******************
+GLOBAL VALUES
+****************** */
 * {
     box-sizing: border-box;
-}
-@font-face {
-    font-family: "rekall";
-    src: url(../font/Smallville1.ttf);
+    margin: 0px;
+    padding: 0px;
 }
 h1 {
-    font-family: 'rekall';
-    font-size: 200px;
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 100px;
     text-transform: uppercase;
     margin: auto 0;
     padding: auto 0;
@@ -21,18 +22,50 @@ h3 {
     font-family: 'Fjalla One', sans-serif;
     font-size: 36px;
 }
+
+/* **********************
+HEADER LINKS/NAV BAR
+********************** */
 header {
     height: 120px;
     display: flex;
 }
+#slide-bar {
+    position: absolute;
+    width: 200px;
+    height: 100%;
+    background: #1C1F26;
+    left: -200px;
+    transition: all 200ms linear;
+    z-index: 100;
+}
+#slide-bar.active {
+    left:0px;
+}
+#slide-bar ul li {
+    color: white;
+    list-style: none;
+    padding: 15px 10px;
+    border-bottom: 1px solid white;
+    display: inline-block;
+}
+#slide-bar .on-button {
+    position: absolute;
+    left: 230px;
+    top: 10px;
+}
+#slide-bar .on-button span {
+    display:block;
+    width: 30px;
+    height: 5px;
+    background: black;
+    margin: 3px 0px;
+}
 .headerLeft {
     background: #F2F2F2;
-    width: 70%;
+    width: 100%;
     display: flex;
     justify-content: space-between;
-}
-.logo {
-
 }
 .address {
     display: flex;
@@ -40,10 +73,6 @@ header {
     align-content: right;
     justify-content: right;
     align-items: right;
-}
-.headerRight {
-    background: #1C1F26;
-    width: 30%;
 }
 .header-links {
     background: #454E59;
@@ -55,6 +84,9 @@ ul li{
     display: inline;
     margin-right: 30px;
 }
+/* ************************
+HERO PAGE
+************************ */
 .hero {
     height: 600px;
     background: gray;
@@ -69,6 +101,9 @@ ul li{
     -webkit-clip-path: polygon(0 0, 83% 0, 100% 100%, 0% 100%);
     clip-path: polygon(0 0, 83% 0, 100% 100%, 0% 100%);
 }
+/* ******************************
+MAIN CONTENT/CONTENT CONTAINER
+****************************** */
 main {
     background: #F2F2F2;
     display: flex;
@@ -80,9 +115,6 @@ main {
     justify-content: center;
     margin: auto;
 }
-.container-wrapper-small {
-
-}
 .container {
     max-width: 80%;
     background: white;
@@ -93,6 +125,19 @@ main {
     border-radius: 15px;
     padding: 10px;
 }
+.img-container {
+    width: 150px;
+    height: 150px;
+    background: blue;
+    margin: 10px;
+}
+table {
+    margin-right: 25px;
+    padding: auto;
+}
+/* *************
+FOOTER
+************* */
 footer {
     height: 150px;
     background: #454E59;

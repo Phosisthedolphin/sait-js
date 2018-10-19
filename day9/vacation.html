@@ -4,12 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="Joel Peterson(admin@joeldpeterson.com), Web Developer">
+    <meta name="description" content="JavaScript portfolio project...thanks Heather!">
     <link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
     <link rel='stylesheet' href='./styles/normalize.css'>
     <link rel='stylesheet' href='./styles/styles.css'>
     <title>Document</title>
 </head>
 <body>
+    <!-- <img id='rocket' src='./img/rocket.png' style='position:absolute;left:0px;'> -->
+    <!-- //RAN OUT OF TIME!! It's over...couldn't get it to animate... :( -->
     <header>
         <div class='headerLeft'>
             <div class='logo'>
@@ -22,19 +26,45 @@
         </div>
         <div class='headerRight'></div>
     </header>
+    <div id='slide-bar'>
+        <div class='on-button' onclick='toggleSlideOn()'>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul>
+            <li><a href='index.html'>Home</a></li>
+            <li><a href='vacation.html'>Vacation Packages</a></li>
+            <li><a href='registration.html'>Registration</a></li>
+            <li><a href='contact.html'>Contact</a></li>
+        </ul>
+        </div>
     <div class='header-links'>
         <ul>
-            <li><a href='./contact.html'>contact</a></li>
-            <li><a href='./registration.html'>registration</a></li>
-            <li><a href='./vacation.html'>vacation</a></li>
+            <li><a href='./contact.html'>Contact</a></li>
+            <li><a href='./registration.html'>Registration</a></li>
+            <li><a href='./vacation.html'>Vacation Packages</a></li>
+            <li><a href='./index.html'>Home</a></li>
         </ul>
     </div>
     <div class='hero'>
+        <div class='heroLeft'>
+            <div style='margin: 10px;margin-right: 10px;'>
+                <h1 style='padding: 70px;'>VACATION PACKAGES</h1>
+                <h2>Customize your REKALL experience.</h2>
+            </div>
+        </div>
     </div>
     <main>
         <div class='container-wrapper-large'>
             <div class='container'>
-                
+                <p>Here are a few of our popular, available packages.</p>
+                <div class='img-container'><img src='./img/planet1.jpg' style='width: 150px;height: 150px;' onmouseover="this.src='./img/planet2.jpg'" onmouseout="this.src='./img/planet1.jpg'"></div>
+                <span>The Venus Vacation</span>
+                <div class='img-container'><img src='./img/planet2.jpg' style='width: 150px;height: 150px;' onmouseover="this.src='./img/planet1.jpg'" onmouseout="this.src='./img/planet2.jpg'"></div>
+                <span>The Jupiter Cruise</span>
+                <div class='img-container'><img src='./img/planet3.jpg' style='width: 150px;height: 150px;' onmouseover="this.src='./img/planet2.jpg'" onmouseout="this.src='./img/planet3.jpg'"></div>
+                <span>The Magic of Mercury</span>
             </div>
         </div>
     </main>

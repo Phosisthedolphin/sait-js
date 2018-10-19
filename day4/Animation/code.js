@@ -34,24 +34,21 @@ var direction = true;
 function catWalk() {
     var img = document.getElementById('cat');
     var currentLeft = parseInt(img.style.left);
-    var currentUp = parseInt(img.style.top);
 
-    if (direction && (currentLeft > (window.innerWidth - img.width)) && currentUp > (window.innerHeight - img.width)) {
+    if (direction && (currentLeft > (window.innerWidth - img.width)) {
         direction = false;
         img.style.transform ='scaleX(-1)';
     }
 
-    if (!direction && (currentLeft <= 0) && (currentUp <= 0)) {
+    if (!direction && (currentLeft <= 0) {
         direction = true;
         img.style.transform ='scaleX(1)';
     }
 
     if (direction) {
         img.style.left = (currentLeft + 10) + 'px';
-        img.style.top = (currentUp + 10) + 'px';
     } else {
         img.style.left = (currentLeft - 10) + 'px';
-        img.style.top = (currentUp - 10) + 'px';
     }
 }
 

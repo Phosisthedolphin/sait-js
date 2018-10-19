@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="Joel Peterson(admin@joeldpeterson.com), Web Developer">
+    <meta name="description" content="JavaScript portfolio project...thanks Heather!">
     <link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
     <link rel='stylesheet' href='./styles/normalize.css'>
     <link rel='stylesheet' href='./styles/styles.css'>
@@ -22,18 +24,70 @@
         </div>
         <div class='headerRight'></div>
     </header>
+    <div id='slide-bar'>
+        <div class='on-button' onclick='toggleSlideOn()'>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul>
+            <li><a href='index.html'>Home</a></li>
+            <li><a href='vacation.html'>Vacation Packages</a></li>
+            <li><a href='registration.html'>Registration</a></li>
+            <li><a href='contact.html'>Contact</a></li>
+        </ul>
+    </div>
     <div class='header-links'>
         <ul>
-            <li><a href='./contact.html'>contact</a></li>
-            <li><a href='./registration.html'>registration</a></li>
-            <li><a href='./vacation.html'>vacation</a></li>
+            <li><a href='./contact.html'>Contact</a></li>
+            <li><a href='./registration.html'>Registration</a></li>
+            <li><a href='./vacation.html'>Vacation Packages</a></li>
+            <li><a href='./index.html'>Home</a></li>
         </ul>
     </div>
     <div class='hero'>
+        <div class='heroLeft'>
+            <div style='margin: 10px; margin-right: 10px;'>
+                <h1 style='padding: 30px'>REGISTER NOW</h1>
+                <h2>Set up a REKALL account today.</h2>
+            </div>
+        </div>
     </div>
     <main>
         <div class='container-wrapper-large'>
             <div class='container'>
+                <form id="userForm" action="bouncer.php">
+                    <table style="width: 100%">
+                        <tr>
+                            <th><label for="first-name" id='firstName'>First Name</label>
+                            <td><input type="text" id="first-name" name="firstname" placeholder="Enter your first name" required minlength='4'></td></th>
+                        </tr>
+                        <tr>
+                            <th><label for="lastname">Last Name</label>
+                            <td><input type="text" id="last-name" name="lastname" placeholder="Enter your last name" required></td></th>
+                        </tr>
+                        <tr>
+                            <th><label for="email">Email</label>
+                            <td><input type="text" id="email-add" name="email"
+                            placeholder="email@domain.com" required></td></th>
+                        </tr>
+                        <tr>
+                            <th><label for='phone'>Phone Number</label>
+                            <td><input type='text' id='phone' name='phone' placeholder="Phone Number" required></td></th>
+                        </tr>
+                        <tr>
+                            <th><label for='address'>Address</label>
+                            <td><input type='text' id='address' name='address' placeholder="Address" required></td></th>
+                        </tr>
+                        <tr>
+                            <th><label for='postal'>Postal Code</label>
+                            <td><input type='text' id='postal' name='postal' placeholder="Postal Code" required></td></th>
+                        </tr>
+                        <tr>
+                            <th><input type="submit" id='submitButton' name='submit' /></th>
+                        </tr>
+                    </table>
+                </form>
             </div>
         </div>
     </main>

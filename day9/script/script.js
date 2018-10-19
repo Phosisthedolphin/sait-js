@@ -43,12 +43,12 @@ displayDate();
 function agentGen() {
     let nameArray = new Array("John Simco", "Judy Steiner", "Rod Barley", "Quaid Wilson", "Frank Booth");
     let phoneArray = new Array("403-000-000", "403-111-1111", "403-222-2222", "403-333-3333", "403-444-4444");
-    for (i = 0; i < nameArray.length; i ++) {
+    for (i = 0; i < nameArray.length; i += 1) {
         info = nameArray[i] + " " + phoneArray[i];
         console.log(info);
+    } for (i = 0; 1 < info.length; i += 1) {
         let agentInfo = document.getElementById('agent');
-        agentInfo.textContent = nameArray[i] + " " + phoneArray[i];
+        agentInfo.textContent = info
     }
 }
-
 agentGen();
